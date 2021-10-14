@@ -6,7 +6,22 @@
 
     <groupId>com.bee</groupId>
     <artifactId>bee-auto</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-RELEASE</version>
+
+    <name>bee-auto</name>
+    <description>Automated configuration tool</description>
+    <url>https://www.bee.com/</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>https://github.com/yao996186979/bee-auto/blob/master/LICENSE</url>
+        </license>
+    </licenses>
+    <scm>
+        <connection>https://github.com/yao996186979/bee-auto.git</connection>
+        <developerConnection>https://github.com/yao996186979/bee-auto</developerConnection>
+        <url>https://github.com/yao996186979/bee-auto</url>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,7 +46,7 @@
             <id>bee_snapshots</id>
             <name>Nexus Snapshot Repository</name>
             <!-- 这里就是在创建issue成功后，对方回复的release发布地址-->
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
 
         <repository>
@@ -39,7 +54,7 @@
             <id>bee_releases</id>
             <name>Nexus Release Repository</name>
             <!-- 这里就是在创建issue成功后，对方回复的release发布地址-->
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>http://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 
@@ -54,7 +69,7 @@
                 <configuration>
                     <!-- 这里的id必须要和全局配置中的release id 一致 -->
                     <serverId>bee_releases</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                     <!-- 如果希望发布后自动执行close和release操作，此处可以调整为true -->
                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
